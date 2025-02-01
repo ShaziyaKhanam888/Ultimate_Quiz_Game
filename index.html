@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="name" content="Ultimate Quiz Game" />
+    <meta
+      name="description"
+      content="Test your knowledge with the Ultimate Quiz Game! Choose your difficulty level and challenge yourself with a variety of questions."
+    />
+    <meta
+      name="keywords"
+      content="quiz, game, knowledge, challenge, easy, medium, hard, questions, trivia, fun, ultimate quiz"
+    />
+    <meta name="author" content="Shaziya Khanam" />
+
+    <title>Ultimate Quiz Game</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/quiz-fav.png" type="image/png" />
+    <!-- Font Awesome CDN (for icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Floating Question Mark Icon (Left) -->
+    <div class="floating-left">❓</div>
+
+    <!-- Welcome Container -->
+    <div class="main-container">
+      <div class="container">
+        <h1>Welcome to the Ultimate Quiz!</h1>
+        <p>Select your difficulty level and start the challenge!</p>
+
+        <!-- Difficulty Level Buttons -->
+        <!-- Difficulty Level Buttons with Badge Icons -->
+        <button class="difficulty" data-difficulty="easy">
+          <i class="fas fa-medal"></i> Easy <span class="badge">★</span>
+        </button>
+        <button class="difficulty" data-difficulty="medium">
+          <i class="fas fa-trophy"></i> Medium <span class="badge">★★</span>
+        </button>
+        <button class="difficulty" data-difficulty="hard">
+          <i class="fas fa-crown"></i> Hard <span class="badge">★★★</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Thinking Emoji (Right) -->
+    <div class="floating-right">🤔</div>
+
+    <div class="quiz-container">
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Quiz Question -->
+      <h2 id="question-text" class="questions">Loading Question...</h2>
+
+      <!-- Answer Options -->
+      <div id="options" class="options-container"></div>
+
+      <!-- Message Display for Validation -->
+      <div id="message"></div>
+
+      <!-- Buttons -->
+      <div class="quiz-buttons">
+        <button id="quit-btn" class="quit-btn">Quit</button>
+      </div>
+    </div>
+
+    <!-- Score Popup -->
+    <div id="score-popup" class="popup">
+      <div class="popup-content">
+        <h2>Your Score: <span id="final-score">0</span></h2>
+        <div id="badge-text"></div>
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+  </body>
+</html>

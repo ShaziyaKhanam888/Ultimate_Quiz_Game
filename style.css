@@ -1,0 +1,298 @@
+/* page 1 style: index.html */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+/* Background */
+body {
+    background-image: linear-gradient(#AAB99A, #727D73);
+    background-attachment: fixed;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Paragraph */
+p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Floating Icons */
+.floating-left, .floating-right {
+    position: absolute;
+    font-size: 10rem;  
+    top: 15%;
+    animation: floatAnimation 3s infinite alternate ease-in-out;
+}
+
+/* Positioning */
+.floating-left {
+    left: 4%; /* Extreme Left */
+}
+
+.floating-right {
+    right: 4%; /* Extreme Right */
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(15px); }
+}
+
+/* Difficulty Buttons */
+.difficulty-buttons {
+    margin-top: 20px;
+}
+
+.difficulty {
+    padding: 12px 25px;
+    margin: 5px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.difficulty:hover {
+    background-color: #0056b3;
+}
+
+/* Start Button */
+.start-btn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    display: none; /* Initially Hidden */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 80%;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+    display: none; /* Hidden Initially */
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #007BFF;
+    transition: width 1s ease;
+}
+ 
+/* page 2: level's style  */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(#AAB99A, #727D73);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Quiz Container */
+.quiz-container {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #007BFF;
+    transition: width 0.5s ease;
+}
+
+/* Question Text */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Option button styling */
+.option-btn {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.option-btn:hover {
+  background-color: #dcdcdc;
+}
+
+  
+  .option-btn:focus {
+    outline: none;
+  }
+  
+  /* Next and Quit Button styling */
+  .next-btn, .quit-btn {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .next-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .next-btn:hover {
+    background-color: #007bb5;
+  }
+  
+  .quit-btn:hover {
+    background-color: #f44336;
+  }
+  /* Difficulty Buttons */
+.difficulty {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Add spacing between icon and text */
+.difficulty i {
+  margin-right: 10px;
+}
+
+/* Hover effect */
+.difficulty:hover {
+  background-color: rgb(18, 72, 126);
+}
+
+/* Specific icons styles */
+.difficulty .fa-medal {
+  color: #ffb400;
+}
+
+.difficulty .fa-trophy {
+  color: #c4a000;
+}
+
+.difficulty .fa-crown {
+  color: #a97100;
+}
+
+  
+  /* Score Popup Styling */
+  #score-popup {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    max-width: 400px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .popup-content h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #4CAF50;
+  }
+  
+  .popup-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .popup-content button:hover {
+    background-color: #007bb5;
+  }
+  
+  badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 12px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+  
+  
